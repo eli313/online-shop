@@ -34,4 +34,5 @@ body {
 
 svg {
     width: 20px;
+    cursor: pointer;
 }

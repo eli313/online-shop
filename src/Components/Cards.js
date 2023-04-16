@@ -1,20 +1,22 @@
-import React, { createContext, useContext, useEffect, useState } from "react";
+import React, { useContext } from "react";
 
 import CardMaker from "./CardMaker";
 // styles
-// import "./Cards.css"
+import "./Cards.css"
 
 // Context
 import ContextProvider from "../context/contextProvider";
 import {ProductContext} from "../context/contextProvider";
+import LoadingPage from "./LoadingPage";
 
 const Cards = (props) => {
     const productContext = useContext(ProductContext)
     return (
-        <div>
+        <div className="product-landing container">
             {
-                productContext.map((singleProduct) => 
-                    <CardMaker key={singleProduct.id} productData={singleProduct} />)
+                productContext ? productContext.map((singleProduct) => 
+                <CardMaker key={singleProduct.id} productData={singleProduct} />)
+                : <LoadingPage/>
             }
         </div>
         )
