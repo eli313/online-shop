@@ -38,7 +38,7 @@ body {
     box-shadow: 0px 0px 10px 1px rgba(0, 255, 117, 0.30);
 }
 
-.card2 div {
+.card2 > div {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -62,6 +62,8 @@ img {
     width: 200px;
     display: flex;
     justify-content: center;
+    align-items: center;
+    flex-direction: row;
     margin-top: 1rem;
     padding: 1rem;
     border-top: 1px solid #fff;
@@ -71,14 +73,44 @@ img {
     all: unset;
     cursor: pointer;
     border-radius: 36px;
-    padding: .5rem 2rem;
     background: #e3e3e3;
     box-shadow:  3px 3px 10px #c3c3c3,
                  -3px -3px 10px #ffffff;
     transition: all .4s;
-    /* border: none; */
+    width: 46px;
+    height: 46px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    }
 
+.card-buttons span {
+    border-radius: 36px;
+    width: 46px;
+    height: 46px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #e3e3e3;
+    box-shadow:  3px 3px 10px #c3c3c3,
+                 -3px -3px 10px #ffffff;
+    transition: all .4s;
+    padding: 1rem;
+    margin: 0 .8rem;
+    font-weight: 600;
+}
 
+.card-buttons .add-button {
+    padding: .2rem 1.6rem;
+    width: auto;
+    font-weight: 600;
+
+}
+
+button.increase-button {
+    font-size: 1.4rem;
+    font-weight: 900;
 }
 
 .card-buttons button:hover {
